@@ -1,37 +1,12 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <title>GameScore Main Page</title>
-    <link rel="stylesheet" href="css/main.css" type="text/css">
-</head>
+    <?php
+        require("plantillas/header.php");
+        require("plantillas/footer.php");
 
-<body>
-    <header>
-        <span id="izquierda">
-            <p>¡Bienvenido a la página!</p>
-
-            <p>Iniciar sesión...<img id="busqueda" class="icono" src="images/Usuario.png"></p>
-            <nav>
-                <ul>
-                    <li><a href="Index.html"><strong>Inicio</strong></a></li>
-                    <li><a href="Seccion1.html"><strong>Sobre nosotros</strong></a></li>
-                    <li><a href="Seccion2.html"><strong>Noticias</strong></a></li>
-                    <li><a href="Seccion3.html"><strong>Reviews</strong></a></li>
-                    <li><a href="Seccion4.html"><strong>Formulario</strong></a></li>
-                </ul>
-            </nav>
-
-        </span>
-
-        <span id="derecha">
-            <img class="logo" src="images/Logo.png">
-
-            <p>Buscar artículo<img class="icono" src="images/Lupa.png"></p>
-        </span>
-
-
-    </header>
+        head("Inicio");
+    ?>
     <main>
         <section id="recientes">
             <h3>Recientes</h3>
@@ -65,10 +40,9 @@
         </section>
     </main>
 
-    <footer>
-        <h2>PÁGINA CREADA POR SAMUEL MANZANARO GARCÍA</h2>
-        <img class="logo" src="images/Logo.png">
-    </footer>
+    <?php
+        footer();
+    ?>
 
 </body>
 
