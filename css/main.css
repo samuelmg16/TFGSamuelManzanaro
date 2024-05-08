@@ -1,0 +1,105 @@
+header {
+    background-color: #59cfa9;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+nav {
+    margin: 0;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    font-size: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 14px;
+}
+
+nav li {
+    display: inline-block;
+    width: 18%;
+    padding: 5px 10px;
+    background-color: #232931;
+    border: 1px solid #eac102;
+    text-align: center;
+    color: #59cfa9;
+    border-radius: 15px;
+}
+
+nav li:hover {
+    background-color: #3f3f3f;
+    color: #59cfa9;
+}
+
+#izquierda {
+    width: 100%;
+    text-align: center;
+}
+
+#derecha {
+    width: 30%;
+    text-align: center;
+}
+
+
+.logo {
+    width: 200px;
+    margin-top: 10px;
+}
+
+
+.icono #busqueda {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px; 
+}
+
+
+.icono{
+    width: 20px;
+    height: 20px;
+}
+
+#recientes {
+    width: 50%;
+    padding: 20px;
+}
+
+
+#recomendaciones {
+    width: 50%;
+    padding: 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: row-reverse; 
+    margin-top: 20px; 
+    overflow-x: hidden;
+    height: 100%;
+}
+
+#recientes, #recomendaciones, #comentarios {
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+footer {
+    background-color: #59cfa9;
+    text-align: center;
+    width: 100%;
+}
+
+img.principal {
+    width: 240px;
+    height: 135px;
+}
+
+article {
+    border-bottom: thin solid #eac102;
+}
