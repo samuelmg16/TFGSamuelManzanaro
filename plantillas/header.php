@@ -11,6 +11,12 @@
 
     <body>
         <header>
+        <span id="derecha">
+                <img class="logo" src="images/Logo.png">
+
+                <p>Buscar artículo<img class="icono" src="images/Lupa.png"></p>
+            </span>
+            
             <span id="izquierda">
                 <p>¡Bienvenido a la página!</p>
 
@@ -27,11 +33,7 @@
 
             </span>
 
-            <span id="derecha">
-                <img class="logo" src="images/Logo.png">
-
-                <p>Buscar artículo<img class="icono" src="images/Lupa.png"></p>
-            </span>
+            
 
 
         </header>

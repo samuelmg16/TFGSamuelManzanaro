@@ -66,28 +66,44 @@ nav li:hover {
 }
 
 #recientes {
-    width: 50%;
     padding: 20px;
 }
 
 
 #recomendaciones {
-    width: 50%;
     padding: 20px;
 }
 
 main {
-    display: flex;
-    flex-direction: row-reverse; 
     margin-top: 20px; 
     overflow-x: hidden;
     height: 100%;
 }
 
-#recientes, #recomendaciones, #comentarios {
+article{
+    max-width: 50%;
+    padding: 15px;
+}
+
+#recientes, #recomendaciones {
     max-height: 100%;
     overflow-y: auto;
 }
+
+#recientes .articulo, #recomendaciones .articulo{
+    padding: 20px;
+    display: flex;
+    flex-direction: row; /* Alinear los artículos horizontalmente */
+    flex-wrap: nowrap; /* Evitar que los artículos se envuelvan a la siguiente línea */
+}
+
+
+
+section{
+    width: 100%;
+    display: block;
+}
+
 
 footer {
     background-color: #59cfa9;
@@ -98,8 +114,4 @@ footer {
 img.principal {
     width: 240px;
     height: 135px;
-}
-
-article {
-    border-bottom: thin solid #eac102;
 }
