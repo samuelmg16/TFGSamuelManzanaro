@@ -29,6 +29,7 @@ nav li {
     text-align: center;
     color: #59cfa9;
     border-radius: 15px;
+    margin: 5px;
 }
 
 nav li:hover {

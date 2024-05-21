@@ -27,7 +27,6 @@
                         <li><a href="Seccion1.html"><strong>Sobre nosotros</strong></a></li>
                         <li><a href="Seccion2.html"><strong>Noticias</strong></a></li>
                         <li><a href="Seccion3.html"><strong>Reviews</strong></a></li>
-                        <li><a href="Seccion4.html"><strong>Formulario</strong></a></li>
                     </ul>
                 </nav>
 
