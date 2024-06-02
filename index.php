@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-
+<head>
 <?php
 require("plantillas/header.php");
 require("plantillas/footer.php");
@@ -12,11 +12,15 @@ head("Inicio");
     <section id="recomendaciones">
         <h3>Recomendaciones</h3>
         <div class="articulo">
+            
             <article>
+                <a href="articulo.php?id=1">
                 <p><strong>Assassin's Creed Mirage</strong>, la nueva entrega de Ubisoft, ha adelantado su fecha de
                     lanzamiento</p>
                 <img src="images/Mirage.jpg" class="principal">
+                </a>
             </article>
+            
             <article>
                 <p><strong>Lies of P</strong>, el aclamado soulslike, ya ha salido a la venta. También disponible en
                     Xbox

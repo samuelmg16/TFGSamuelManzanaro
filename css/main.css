@@ -47,6 +47,14 @@ nav li:hover {
     text-align: center;
 }
 
+article a{
+    color: #232931;
+    text-decoration: none;
+}
+
+article a:hover{
+    text-decoration: underline;
+}
 
 .logo {
     width: 200px;
@@ -111,6 +119,22 @@ footer {
     text-align: center;
     width: 100%;
 }
+
+.lista-footer{
+    list-style-type: none;
+    color: #232931;
+}
+
+.lista-footer li a{
+    color: #232931;
+    text-decoration: none;
+}
+
+.lista-footer li a:hover{
+    color: #232931;
+    text-decoration: underline;
+}
+
 
 img.principal {
     width: 240px;
