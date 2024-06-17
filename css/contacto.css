@@ -1,0 +1,50 @@
+/* Estilos del formulario de contacto */
+#contacto {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#contacto h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#contacto label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#contacto input[type="text"],
+#contacto input[type="email"],
+#contacto textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#contacto textarea {
+    height: 100px;
+}
+
+#contacto button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contacto button:hover {
+    background-color: #555;
+}
+
+main {
+    width: 80%;
+    margin: 20px auto;
+}

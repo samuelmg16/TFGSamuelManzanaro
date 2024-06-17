@@ -2,9 +2,8 @@
 function footer()
 {
 ?>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <footer>
-        <div class="row align-items-center">
+        <div class="footer-container">
             <div class="col-md-3">
                 <a href="Index.php">
                     <img class="logo" src="images/Logo.png" alt="Logo GameScore">
@@ -23,8 +22,8 @@ function footer()
             <div class="col-md-3">
                 <ul class="lista-footer">
                     <li><strong>GameScore</strong></li>
-                    <li><a href="contacto.php">Sobre nosotros</a></li>
-                    <li><a href="reviews.php">Contacta con nosotros</a></li>
+                    <li><a href="nosotros.php">Sobre nosotros</a></li>
+                    <li><a href="contacto.php">Contacta con nosotros</a></li>
                 </ul>
             </div>
             <div class="col-md-3">
@@ -32,13 +31,17 @@ function footer()
                     <li><strong>Enlaces Rápidos</strong></li>
                     <li><a href="reviews.php">Reviews</a></li>
                     <li><a href="noticias.php">Noticias</a></li>
-                    <li><a href="artículos.php">Todos los Artículos</a></li>
+                    <li><a href="articulos.php">Todos los Artículos</a></li>
                 </ul>
             </div>
-
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 GameScore. Todos los derechos reservados.
         </div>
     </footer>
-
+    <script src="js/menuToggle.js"></script>
+    <script src="js/sesiones.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <?php
 }
 ?>

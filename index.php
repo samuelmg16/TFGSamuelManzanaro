@@ -1,54 +1,69 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="es">
 <?php
-require("plantillas/header.php");
-require("plantillas/footer.php");
+require_once "plantillas/header.php";
+require_once "plantillas/footer.php";
+require_once "plantillas/modales.php";
+
+require_once "dao/DaoArticulos.php";
+require_once "dao/DaoVideojuegos.php";
+
+$daoArts = new DaoArticulos();
+$daoJuego = new DaoVideojuegos();
+
+// Obtenemos los dos artículos con mayor cantidad de comentarios
+$daoArts->listarArticulosRecomendados();
+$topArticulos = $daoArts->articulos;
+
+$daoArts->listarArticulosRecientes();
+$artsRecientes = $daoArts->articulos;
 
 head("Inicio");
 ?>
 <main>
-
-    <section id="recomendaciones">
-        <h3>Recomendaciones</h3>
-        <div class="articulo">
-            
-            <article>
-                <a href="articulo.php?id=1">
-                <p><strong>Assassin's Creed Mirage</strong>, la nueva entrega de Ubisoft, ha adelantado su fecha de
-                    lanzamiento</p>
-                <img src="images/Mirage.jpg" class="principal">
-                </a>
-            </article>
-            
-            <article>
-                <p><strong>Lies of P</strong>, el aclamado soulslike, ya ha salido a la venta. También disponible en
-                    Xbox
-                    Game Pass. Puedes conocer nuestra
-                    opinión aquí</p>
-                <img src="images/Liesofp.jpg" class="principal">
-            </article>
+    <section id="recomendaciones" class="mb-5">
+        <h2>Recomendaciones</h2>
+        <div class="articulos">
+            <?php foreach ($topArticulos as $articulo){ ?>
+                <article>
+                    <a href="articulo.php?id=<?php echo $articulo->__get('id'); ?>">
+                        <?php
+                            $videojuego = $daoJuego->obtener($articulo->__get('videojuego_id'));
+                            $portada = base64_encode($videojuego->__get('portada'));
+                            $extension = $videojuego->__get('extension_portada');
+                        ?>
+                        <img src="data:image/<?php echo $extension; ?>;base64,<?php echo $portada; ?>" class="principal" alt="Portada del artículo">
+                        <h5><?php echo $articulo->__get('titulo'); ?></h5>
+                        <p><?php echo $articulo->__get('resumen'); ?></p>
+                    </a>
+                </article>
+            <?php } ?>
         </div>
     </section>
     <section id="recientes">
-        <h3>Recientes</h3>
-        <div class="articulo">
-            <article>
-                <p><strong>Like a dragon: Gaiden</strong> es uno de los juegos más esperados de Ryu ga Gotoku. Saldrá el
-                    mes
-                    de noviembre y aquí tendrás todos los datos que se saben sobre él</p><img src="images/Gaiden.jpg" class="principal"><br>
-
-            </article>
-            <article>
-                <p><strong>Tales of Arise</strong>, el JRPG de Bandai Namco, recibirá una nueva expansión que amplía la
-                    historia ya contada
-                    y saldrá el 9 de noviembre</p><img src="images/Tales.jpg" class="principal">
-            </article>
+        <h2>Recientes</h2>
+        <div class="articulos">
+            <?php foreach ($artsRecientes as $articulo){ ?>
+                <article>
+                    <a href="articulo.php?id=<?php echo $articulo->__get('id'); ?>">
+                        <?php
+                            $videojuego = $daoJuego->obtener($articulo->__get('videojuego_id'));
+                            $portada = base64_encode($videojuego->__get('portada'));
+                            $extension = $videojuego->__get('extension_portada');
+                        ?>
+                        <img src="data:image/<?php echo $extension; ?>;base64,<?php echo $portada; ?>" class="principal" alt="Portada del artículo">
+                        <h5><?php echo $articulo->__get('titulo'); ?></h5>
+                        <p><?php echo $articulo->__get('resumen'); ?></p>
+                    </a>
+                </article>
+            <?php } ?>
         </div>
     </section>
 </main>
 
 <?php
+modalIniciarSesion();
+modalRegistroUsuario();
 footer();
 ?>
 

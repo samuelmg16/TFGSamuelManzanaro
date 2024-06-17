@@ -1,0 +1,48 @@
+.article-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+.article-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.article-content {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.article-sidebar {
+    text-align: center;
+}
+
+.article-sidebar img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.article-sidebar img:hover {
+    transform: scale(1.05);
+}
+
+.article-sidebar a {
+    display: block;
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.article-sidebar a:hover {
+    color: #0056b3;
+}
